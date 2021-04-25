@@ -139,6 +139,7 @@ def database_insert(location, weather):
     try:
         # executeメソッドの引数に、C言語のprintfのような感じにSQL文を入れる
         cur.execute("INSERT INTO weathers VALUES (%s, %s)", (location, weather))
+        # データベースに内容を適応
         db.commit()
         return "OK"
 
